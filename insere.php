@@ -2,7 +2,7 @@
             ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
             //verifica se existe conexão com bd, caso não tenta criar uma nova
-            $conexao = mysqli_connect("localhost","root","") //porta, usuário, senha
+            $conexao = mysqli_connect("localhost","denisson","123456") //porta, usuário, senha
             or die("Erro na conexão com banco de dados"); //caso não consiga conectar mostra a 
                                                          // mensagem de erro mostrada na conexão
      
@@ -19,13 +19,13 @@
      
             if(mysqli_affected_rows($conexao) == 1){ //verifica se foi afetada alguma linha, nesse caso inserida alguma linha
                 echo "<p>Cadastro feito com sucesso</p>";
-                echo '<a href="index.html">Voltar para pagina principal da empresa</a>'; //Apenas um link para retornar para o site da empresa
+                echo '<a href="index.html">Voltar para home</a>'; //Apenas um link para retornar para o site da empresa
             } else {
                 echo "Erro, não foi possível inserir no banco de dados";
             }
      
             mysqli_close($conexao); //fecha conexão com banco de dados 
-        ?>
+        
 
 
 

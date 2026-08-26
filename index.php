@@ -13,7 +13,7 @@
             <br />
             Username: <input type="text" name="user" />
             <br />
-            Email: <input type="text" name="email" />
+            Email: <input type="email" name="email" />
             <br />
             <input type="submit" value="Cadastrar" />
         </form>

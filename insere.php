@@ -18,13 +18,18 @@
             mysqli_query($conexao, $string_sql); //Realiza a consulta
      
             if(mysqli_affected_rows($conexao) == 1){ //verifica se foi afetada alguma linha, nesse caso inserida alguma linha
-                echo "<p>Cadastro feito com sucesso</p>";
-                echo '<a href="index.html">Voltar para home</a>'; //Apenas um link para retornar para o site da empresa
+                echo "<p>Cadastro feito com sucesso</p><br/>";
+                echo '<a href="index.html">Voltar para home</a><br/>'; //Apenas um link para retornar para o site da empresa
+                header("refresh:3;url=index.html");
+                echo 'Redirecionando a página em 3 segundos!';
             } else {
                 echo "Erro, não foi possível inserir no banco de dados";
+                header("refresh:3;url=index.php");
+                echo 'Redirecionando a página em 3 segundos!';
+
             }
      
-            mysqli_close($conexao); //fecha conexão com banco de dados 
+            mysqli_close($conexao); //fechar conexão com banco de dados 
         
 
 

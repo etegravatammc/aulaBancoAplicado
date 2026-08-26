@@ -30,8 +30,6 @@
             }
      
             mysqli_close($conexao); //fechar conexão com banco de dados 
-        
-
 
 
 ?>

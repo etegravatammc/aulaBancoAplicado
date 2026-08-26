@@ -11,9 +11,11 @@
             <label for="nome">Nome: </label>
             <input type="text" name="nome" />
             <br />
-            Username: <input type="text" name="user" />
+            <label for="user">User: </label>
+            <input type="text" name="user" />
             <br />
-            Email: <input type="email" name="email" />
+            <label for="email">Email: </label>
+            <input type="email" name="email" />
             <br />
             <input type="submit" value="Cadastrar" />
         </form>

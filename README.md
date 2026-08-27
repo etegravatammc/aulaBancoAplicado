@@ -6,12 +6,12 @@ Atualizar pacotes: sudo apt update
 Instalar o PHP: sudo apt install php php-cli
 
 sudo apt update && sudo apt install php-mysqli
-
+sudo service mariadb start
+sudo mariadb -u root -p
 
 CREATE USER 'denisson'@'localhost' IDENTIFIED BY '123456';
 GRANT ALL PRIVILEGES ON *.* TO 'denisson'@'localhost';
 FLUSH PRIVILEGES;
-
 
 Verificar a versão instalada: php -v
 
@@ -31,7 +31,7 @@ Caso a versão seja a 8.4
 
 php -S localhost:8000
 
-Caso ocorram erros ao usaro php8.4 use o comando abaixo 
+Caso ocorram erros ao usar o php8.4 use o comando abaixo 
 
 php8.3 -S localhost:8000
 
